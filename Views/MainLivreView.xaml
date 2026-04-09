@@ -1,0 +1,39 @@
+﻿<Window x:Class="ExamFinalePt1NR.Views.MainLivreView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamFinalePt1NR.Views"
+        mc:Ignorable="d"
+        Title="MainLivreView" Height="500" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Background="#2b3d4f" Grid.RowSpan="6">
+                <TextBlock Text="GESTION DES LIVRES" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="22" FontWeight="Bold" Foreground="White" Grid.Row="0"/>
+            </Grid>
+            <Separator Margin="0,75,0,0" Grid.Row="0"/>
+            <Separator Margin="0,75,0,0" Grid.Row="4"/>
+            <Button Width="200" Height="50" Grid.Row="1" Background="#FF32AD5F" Content="+ Ajouter un livre" FontWeight="Bold" FontSize="16" Foreground="White" Click="BtnClick_Ajouter"/>
+            <Button Width="200" Height="50" Grid.Row="2" Background="#e64b3b" Content="X Supprimer un livre" FontWeight="Bold" FontSize="16" Foreground="White" Click="BtnClick_Supprimer"/>
+            <Button Width="200" Height="50" Grid.Row="3" Background="#297fb8" Content="Modifier un livre" FontWeight="Bold" FontSize="16" Foreground="White" Click="BtnClick_Modifier"/>
+            <Button Width="200" Height="50" Grid.Row="4" Background="#8d44ac" Content="Rechercehr des livres" FontWeight="Bold" FontSize="16" Foreground="White" Click="BtnClick_Rechercher"/>
+            <Button Width="200" Height="50" Grid.Row="5" Background="#7e8b8d" Content="Quitter" FontWeight="Bold" FontSize="16" Foreground="White" Click="BtnClick_Quitter"/>
+        </Grid>
+        <ContentControl x:Name="MainContent"/>
+    </Grid>
+</Window>
