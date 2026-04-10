@@ -45,7 +45,7 @@
                    VerticalAlignment="Center"/>
         
         <TextBox x:Name="TxtTitre" Grid.Row="1" Grid.Column="1" 
-                 Grid.ColumnSpan="5" Height="30" Margin="5,10"/>
+                 Grid.ColumnSpan="5" Height="30" Margin="5,10" VerticalContentAlignment="Center"/>
         
         
         
@@ -57,7 +57,7 @@
                    VerticalAlignment="Center"/>
 
         <TextBox x:Name="TxtAuteur" Grid.Row="2" Grid.Column="1"
-                 Grid.ColumnSpan="5" Height="30" Margin="5,10"/>
+                 Grid.ColumnSpan="5" Height="30" Margin="5,10" VerticalContentAlignment="Center"/>
         <!--ligne 4-->
         <TextBlock Grid.Column="0" Grid.Row="3" Text="ISBN :"
                    HorizontalAlignment="Center"
@@ -66,7 +66,7 @@
                    VerticalAlignment="Center"/>
 
         <TextBox x:Name="TxtISBn" Grid.Row="3" Grid.Column="1" 
-                 Grid.ColumnSpan="5" Height="30" Margin="5,10"/>
+                 Grid.ColumnSpan="5" Height="30" Margin="5,10" VerticalContentAlignment="Center"/>
         <!--ligne 5-->
         <TextBlock Grid.Column="0" Grid.Row="4" Text="Prix :"
                    HorizontalAlignment="Center"
@@ -75,7 +75,7 @@
                    VerticalAlignment="Center"/>
 
         <TextBox x:Name="TxtPrix" Grid.Row="4" Grid.Column="1" 
-                 Grid.ColumnSpan="5" Height="30" Margin="5,10"/>
+                 Grid.ColumnSpan="5" Height="30" Margin="5,10" VerticalContentAlignment="Center"/>
         <!--ligne 6-->
         <TextBlock Grid.Column="0" Grid.Row="5" Text="Catégorie :"
                    HorizontalAlignment="Center"
@@ -83,7 +83,7 @@
                    FontWeight="Bold"
                    VerticalAlignment="Center"/>
 
-        <ComboBox x:Name="CboCateg" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" Margin="5,10">
+        <ComboBox x:Name="CboCateg" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" Margin="5,10" VerticalContentAlignment="Center">
             <ComboBoxItem Name="Litterature">Litterature</ComboBoxItem>
             <ComboBoxItem Name="Science_Fiction">Science-Fiction</ComboBoxItem>
             <ComboBoxItem Name="Classique">Classique</ComboBoxItem>

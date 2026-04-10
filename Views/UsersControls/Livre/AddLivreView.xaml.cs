@@ -81,8 +81,8 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             TxtAuteur.Text = "";
             CboCateg.SelectedIndex = 1;
             TxtISBn.Text = "";
-            TxtPrix.Text = "";
-            TxtQuantte.Text = "";
+            TxtPrix.Text = "0";
+            TxtQuantte.Text = "0";
             TxtTitre.Text = "";
         }
 
