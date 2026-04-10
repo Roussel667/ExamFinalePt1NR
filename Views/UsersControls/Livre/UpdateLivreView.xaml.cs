@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ExamFinalePt1NR.Data.REpositories.JsonRepositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExamFinalePt1NR.Models;
 
 namespace ExamFinalePt1NR.Views.UsersControls.Livre
 {
@@ -20,9 +23,30 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
     /// </summary>
     public partial class UpdateLivreView : UserControl
     {
-        public UpdateLivreView()
+        private JsonLivreRepository _jsonLivreRepository;
+        private Models.Livre _livreAModifier;
+
+
+        public UpdateLivreView(Models.Livre livre)
         {
             InitializeComponent();
+            _jsonLivreRepository = new JsonLivreRepository();
+            _livreAModifier = livre;
+        }
+
+        private void BtnModifier_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnChercher_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
