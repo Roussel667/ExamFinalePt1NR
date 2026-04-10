@@ -34,7 +34,6 @@ namespace ExamFinalePt1NR.Views
         }
         private void BtnClick_Ajouter(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Affichage de la section Ajouter");
             MainContent.Content = new AddLivreView();
         }
 
@@ -42,20 +41,17 @@ namespace ExamFinalePt1NR.Views
 
         private void BtnClick_Supprimer(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Affichage de la section Supprimer");
             MainContent.Content = new DeleteLivreView();
             
         }
 
         private void BtnClick_Modifier(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Affichage de la section Modifier");
             MainContent.Content = new UpdateLivreView();
         }
 
         private void BtnClick_Rechercher(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Affichage de la section Rechercher");
             MainContent.Content = new FindLivreView();
         }
     }

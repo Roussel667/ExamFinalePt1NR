@@ -24,5 +24,10 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         {
             InitializeComponent();
         }
+
+        private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
