@@ -61,5 +61,14 @@
     "Prix": 123,
     "Categorie": "Science-Fiction",
     "Quantite": 3
+  },
+  {
+    "Id": 8,
+    "Titre": "Arabe 2",
+    "Auteur": "Antonio",
+    "Isbn": "213424-3215",
+    "Prix": 9,
+    "Categorie": "Classique",
+    "Quantite": 5
   }
 ]

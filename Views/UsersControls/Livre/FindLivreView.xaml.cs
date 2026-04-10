@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamFinalePt1NR.Data.REpositories.JsonRepositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,38 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
     /// </summary>
     public partial class FindLivreView : UserControl
     {
+        private JsonLivreRepository _jsonLivreRepository;
         public FindLivreView()
         {
             InitializeComponent();
+            _jsonLivreRepository = new JsonLivreRepository();
         }
 
         private void BtnRechercher_Click(object sender, RoutedEventArgs e)
         {
-
+            var critere = TxtCritere.Text.Trim();
+            if (string.IsNullOrEmpty(TxtCritere.Text))
+            {
+                MessageBox.Show("Veuillez entrer un critère de recherche.");
+                return;
+            }
+            else
+            {
+                var livresTrouves = _jsonLivreRepository.GetByCritere(critere);
+                if (livresTrouves.Count == 0)
+                {
+                    MessageBox.Show("Aucun livre trouvé pour le critère spécifié.");
+                }
+                else
+                {
+                    DgLivre.ItemsSource = livresTrouves.ToList();
+                }
+            }
         }
 
         private void BtnAfficherTout_Click(object sender, RoutedEventArgs e)
         {
-
+            DgLivre.ItemsSource = _jsonLivreRepository.GetALL().ToList();
         }
     }
 }

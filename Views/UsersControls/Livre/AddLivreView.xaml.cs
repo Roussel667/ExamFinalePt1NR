@@ -56,7 +56,7 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
 
             if (CboCateg.SelectedItem == null)
             {
-                MessageBox.Show("Veuillez sélectionner une taille.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Veuillez sélectionner une catégorie.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 

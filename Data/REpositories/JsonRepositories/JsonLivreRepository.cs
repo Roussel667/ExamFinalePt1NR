@@ -54,9 +54,9 @@ namespace ExamFinalePt1NR.Data.REpositories.JsonRepositories
              return ChargerDepuisJson();
         }
 
-        public List<Livre> GetByCategorie(string catégorie)
+        public List<Livre> GetByCategorie(string categorie)
         {
-            return ChargerDepuisJson().Where(l => l.Categorie.Equals(catégorie, StringComparison.OrdinalIgnoreCase)).ToList();
+            return ChargerDepuisJson().Where(l => l.Categorie.Contains(categorie)).ToList();
         }
 
         public Livre GetById(int id)
@@ -82,5 +82,13 @@ namespace ExamFinalePt1NR.Data.REpositories.JsonRepositories
             }
         }
 
+        public List<Livre> GetByCritere(string critere)
+        {
+            critere = critere.ToLower();
+            return ChargerDepuisJson().Where(l =>  l.Titre.ToLower().Contains(critere) ||
+                                                   l.Auteur.ToLower().Contains(critere) ||
+                                                   l.Isbn.ToLower().Contains(critere) ||                                                 
+                                                   l.Categorie.ToLower().Contains(critere)).ToList();
+        }
     }
 }
