@@ -64,9 +64,9 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             _livreaSupprimer = null;
         }
 
-        private void BtnClick_Annuler(object sender, RoutedEventArgs e)
+        private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
         {
-            TxtId.Clear();
+
         }
     }
 }

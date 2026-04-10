@@ -48,5 +48,10 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         {
 
         }
+
+        private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

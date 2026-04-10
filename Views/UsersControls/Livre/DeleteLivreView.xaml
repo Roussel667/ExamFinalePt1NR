@@ -67,7 +67,7 @@
                 FontWeight="Bold"
                 FontSize="12"
                 Foreground="White" 
-                Click="BtnClick_Annuler"
+                Click="BtnAnnuler_Click"
                 Margin="100,0,0,0"/>
 
 
