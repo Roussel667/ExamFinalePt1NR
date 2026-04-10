@@ -32,6 +32,23 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             InitializeComponent();
             _jsonLivreRepository = new JsonLivreRepository();
         }
+        public void ChargerLivre()
+        {
+            var livres = _jsonLivreRepository.GetALL().ToList();
+        }
+        private void ChargerLivreFormulaire()
+        {
+            if (TxtId.Text == null)
+                return;
+
+           _livreAModifier = _jsonLivreRepository.GetById(int.Parse(TxtId.Text));
+
+            TxtTitre.Text = _livreAModifier.Titre;
+            TxtAuteur.Text = _livreAModifier.Auteur;
+            TxtCategorie.Text = _livreAModifier.Categorie;
+            TxtQuantite.Text = _livreAModifier.Quantite.ToString();
+                      
+        }
 
         private void BtnModifier_Click(object sender, RoutedEventArgs e)
         {
@@ -45,7 +62,7 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
 
         private void BtnChercher_Click(object sender, RoutedEventArgs e)
         {
-
-        }
+            ChargerLivreFormulaire();
+        }       
     }
 }
