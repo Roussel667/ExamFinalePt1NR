@@ -25,7 +25,12 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             InitializeComponent();
         }
 
-        private void TxtCritere_TextChanged(object sender, TextChangedEventArgs e)
+        private void BtnRechercher_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnAfficherTout_Click(object sender, RoutedEventArgs e)
         {
 
         }

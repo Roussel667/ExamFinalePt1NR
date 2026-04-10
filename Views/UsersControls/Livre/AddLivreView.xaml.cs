@@ -30,7 +30,7 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             InitializeComponent();
             _livreRepository = new JsonLivreRepository();
 
-            CboCateg.SelectedIndex = 1;
+            CboCateg.SelectedIndex = 0;
             
         }
 
@@ -79,7 +79,7 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
         {
             TxtAuteur.Text = "";
-            CboCateg.SelectedIndex = 1;
+            CboCateg.SelectedIndex = 0;
             TxtISBn.Text = "";
             TxtPrix.Text = "0";
             TxtQuantte.Text = "0";
