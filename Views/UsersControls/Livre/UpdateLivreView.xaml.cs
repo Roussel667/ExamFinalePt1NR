@@ -52,12 +52,34 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
 
         private void BtnModifier_Click(object sender, RoutedEventArgs e)
         {
-            
+            string titre = TxtTitre.Text.Trim();
+            string auteur = TxtAuteur.Text.Trim();
+            string categorie = TxtCategorie.Text.Trim();
+            int quantite = int.Parse(TxtQuantite.Text.Trim());
+
+            if (string.IsNullOrWhiteSpace(titre) || string.IsNullOrWhiteSpace(auteur) || string.IsNullOrWhiteSpace(categorie) || quantite < 0)
+            {
+                MessageBox.Show("Veuillez entrer Toutes les valeurs du livre.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            _livreAModifier.Titre = titre;
+            _livreAModifier.Auteur = auteur;
+            _livreAModifier.Categorie = categorie;
+            _livreAModifier.Quantite = quantite;
+
+            _jsonLivreRepository.Update(_livreAModifier);
+            MessageBox.Show("La pizza a été modifiée avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
 
         private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
         {
-
+            TxtId.Text = "";
+            TxtTitre.Text = "";
+            TxtAuteur.Text = "";
+            TxtCategorie.Text = "";
+            TxtQuantite.Text = "";
         }
 
         private void BtnChercher_Click(object sender, RoutedEventArgs e)
