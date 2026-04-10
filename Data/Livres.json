@@ -3,16 +3,16 @@
     "Id": 1,
     "Titre": "Le Petit Prince",
     "Auteur": "Antoine de Saint-Exup\u00E9ry",
-    "ISBN": "978-2070612758",
+    "Isbn": null,
     "Prix": 12.99,
-    "Categorie": "Litt\u00E9rature",
+    "Categorie": "Litterature",
     "Quantite": 5
   },
   {
     "Id": 2,
     "Titre": "1984",
     "Auteur": "George Orwell",
-    "ISBN": "978-0451524935",
+    "Isbn": null,
     "Prix": 14.5,
     "Categorie": "Science-Fiction",
     "Quantite": 4
@@ -21,9 +21,9 @@
     "Id": 3,
     "Titre": "Les Mis\u00E9rables",
     "Auteur": "Victor Hugo",
-    "ISBN": "978-2253004224",
+    "Isbn": null,
     "Prix": 18.9,
     "Categorie": "Classique",
     "Quantite": 3
   }
-] 
+]

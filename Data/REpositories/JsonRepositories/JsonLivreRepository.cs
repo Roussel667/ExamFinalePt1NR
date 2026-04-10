@@ -2,8 +2,10 @@
 using ExamFinalePt1NR.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ExamFinalePt1NR.Data.REpositories.JsonRepositories
@@ -12,34 +14,73 @@ namespace ExamFinalePt1NR.Data.REpositories.JsonRepositories
     {
         private readonly string _filePath = "../../../Data/Livres.json";
 
-        public void Add(Livre t)
+        public List<Livre> ChargerDepuisJson()
         {
-            throw new NotImplementedException();
+            if (!File.Exists(_filePath))
+                return new List<Livre>();
+
+            string json = File.ReadAllText(_filePath);
+            return JsonSerializer.Deserialize<List<Livre>>(json) ?? new List<Livre>();
+        }
+        private void SauvegarderDansJson(List<Livre> livres)
+        {
+            string json = JsonSerializer.Serialize(livres, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(_filePath, json);
         }
 
-        public void Delete(Livre t)
+        public void Add(Livre t)
         {
-            throw new NotImplementedException();
+            List<Livre> livres= ChargerDepuisJson();
+
+            t.Id = livres.Count > 0 ? livres.Max(p => p.Id) + 1 : 1;
+            livres.Add(t);
+
+            SauvegarderDansJson(livres);
+        }
+
+        public void Delete(Livre id)
+        {
+            List<Livre> livres = ChargerDepuisJson();
+            Livre livreASupprimer = livres.FirstOrDefault(l => l.Id == id.Id);
+            if (livreASupprimer != null)
+            {
+                livres.Remove(livreASupprimer);
+                SauvegarderDansJson(livres);
+            }
         }
 
         public List<Livre> GetALL()
         {
-            throw new NotImplementedException();
+             return ChargerDepuisJson();
         }
 
         public List<Livre> GetByCategorie(string catégorie)
         {
-            throw new NotImplementedException();
+            return ChargerDepuisJson().Where(l => l.Categorie.Equals(catégorie, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
         public Livre GetById(int id)
         {
-            throw new NotImplementedException();
+            return ChargerDepuisJson().FirstOrDefault(l => l.Id == id);
         }
 
         public void Update(Livre t)
         {
-            throw new NotImplementedException();
+            List<Livre> livres = ChargerDepuisJson();
+            Livre livreExist = livres.FirstOrDefault(l => l.Id == t.Id);
+
+            if (livreExist != null)
+            {
+                livreExist.Titre = t.Titre;
+                livreExist.Auteur = t.Auteur;
+                livreExist.Isbn = t.Isbn;
+                livreExist.Prix = t.Prix;
+                livreExist.Categorie = t.Categorie;
+                livreExist.Quantite = t.Quantite;
+
+                SauvegarderDansJson(livres);
+            }
         }
+
     }
 }
