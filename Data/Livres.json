@@ -32,7 +32,25 @@
     "Auteur": "1",
     "Isbn": "234-3481926739",
     "Prix": 1,
-    "Categorie": "System.Windows.Controls.ComboBoxItem: Science-Fiction",
+    "Categorie": "Science-Fiction",
+    "Quantite": 1
+  },
+  {
+    "Id": 5,
+    "Titre": "Test",
+    "Auteur": "1",
+    "Isbn": "12342",
+    "Prix": 123,
+    "Categorie": "Classique",
+    "Quantite": 1
+  },
+  {
+    "Id": 6,
+    "Titre": "Test34",
+    "Auteur": "1",
+    "Isbn": "12342",
+    "Prix": 123,
+    "Categorie": "Classique",
     "Quantite": 1
   }
 ]

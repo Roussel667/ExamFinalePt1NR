@@ -38,8 +38,11 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         }
         private void ChargerLivreFormulaire()
         {
-            if (TxtId.Text == null)
+            if (string.IsNullOrEmpty(TxtId.Text))
+            {
+                MessageBox.Show("Veuillez entrer un ID.");
                 return;
+            }
 
            _livreAModifier = _jsonLivreRepository.GetById(int.Parse(TxtId.Text));
 

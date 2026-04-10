@@ -95,9 +95,15 @@
            FontSize="15"
            FontWeight="Bold"
            VerticalAlignment="Center"/>
-        
-        <TextBox x:Name="TxtQuantte" Grid.Row="6" Grid.Column="1" 
-                 Grid.ColumnSpan="1" Height="30" Margin="5,10"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button Content="-" Width="30" Height="30" Click="BtnDecrementer_Click" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center" />
+            
+            <TextBox x:Name="TxtQuantte" Grid.Row="6" Grid.Column="1" 
+                    Grid.ColumnSpan="1" Width="50" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Text="0" PreviewTextInput="NumberValidationTextBox"/>
+
+            <Button Content="+" Width="30" Height="30" Click="BtnIncrementer_Click" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center" />
+        </StackPanel>
 
 
 

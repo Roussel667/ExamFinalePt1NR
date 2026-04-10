@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -59,14 +60,14 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
                 return;
             }
 
-            
+
             Models.Livre nouveauLivre = new Models.Livre
             {
                 Titre = titre,
                 Auteur = auteur,
                 Isbn = isbn,
                 Prix = prix,
-                Categorie = CboCateg.SelectedItem.ToString(),
+                Categorie = CboCateg.SelectionBoxItem.ToString(),
                 Quantite = quantite,
             };
 
@@ -83,6 +84,22 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             TxtPrix.Text = "";
             TxtQuantte.Text = "";
             TxtTitre.Text = "";
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void BtnDecrementer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnIncrementer_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
