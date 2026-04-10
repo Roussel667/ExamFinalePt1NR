@@ -27,11 +27,10 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         private Models.Livre _livreAModifier;
 
 
-        public UpdateLivreView(Models.Livre livre)
+        public UpdateLivreView()
         {
             InitializeComponent();
             _jsonLivreRepository = new JsonLivreRepository();
-            _livreAModifier = livre;
         }
 
         private void BtnModifier_Click(object sender, RoutedEventArgs e)
@@ -45,11 +44,6 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         }
 
         private void BtnChercher_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnAnnuler_Click(object sender, RoutedEventArgs e)
         {
 
         }
