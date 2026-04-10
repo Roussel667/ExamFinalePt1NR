@@ -38,8 +38,8 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             string titre = TxtTitre.Text;
             string auteur = TxtAuteur.Text;
             string isbn = TxtISBn.Text;
-            string prix = TxtPrix.Text;
-            string quantite = TxtQuantte.Text;
+            double prix = double.Parse(TxtPrix.Text);
+            int quantite = int.Parse(TxtQuantte.Text);
 
             if (string.IsNullOrWhiteSpace(titre))
             {
@@ -47,8 +47,7 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
                 return;
             }
 
-            if (!decimal.TryParse(prix, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal prix) &&
-                !decimal.TryParse(prix, out prix))
+            if (!double.TryParse(TxtPrix.Text, out double prixDecimal))
             {
                 MessageBox.Show("Veuillez entrer un prix valide.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -61,20 +60,19 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
             }
 
             
-
-            Livre nouveauLivre = new Livre
+            Models.Livre nouveauLivre = new Models.Livre
             {
                 Titre = titre,
                 Auteur = auteur,
                 Isbn = isbn,
-                Quantite = quantite,
                 Prix = prix,
-                
+                Categorie = CboCateg.SelectedItem.ToString(),
+                Quantite = quantite,
             };
 
             _livreRepository.Add(nouveauLivre);
 
-            MessageBox.Show("La pizza a été ajoutée avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Le livre a été ajoutée avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void BtnAnnuler_Click(object sender, RoutedEventArgs e)

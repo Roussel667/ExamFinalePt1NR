@@ -24,5 +24,10 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
         {
             InitializeComponent();
         }
+
+        private void TxtCritere_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace ExamFinalePt1NR.Models
         public double Prix { get; set; }
         public string Categorie { get; set; }
         public int Quantite { get; set; }
+
         public Livre() 
         {
 
