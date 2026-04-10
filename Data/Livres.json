@@ -3,7 +3,7 @@
     "Id": 1,
     "Titre": "Le Petit Prince",
     "Auteur": "Antoine de Saint-Exup\u00E9ry",
-    "Isbn": null,
+    "Isbn": "123-129388214",
     "Prix": 12.99,
     "Categorie": "Litterature",
     "Quantite": 5
@@ -12,7 +12,7 @@
     "Id": 2,
     "Titre": "1984",
     "Auteur": "George Orwell",
-    "Isbn": null,
+    "Isbn": "39183-12893",
     "Prix": 14.5,
     "Categorie": "Science-Fiction",
     "Quantite": 4
@@ -21,9 +21,18 @@
     "Id": 3,
     "Titre": "Les Mis\u00E9rables",
     "Auteur": "Victor Hugo",
-    "Isbn": null,
+    "Isbn": "31323-2839123",
     "Prix": 18.9,
     "Categorie": "Classique",
     "Quantite": 3
+  },
+  {
+    "Id": 4,
+    "Titre": "Test",
+    "Auteur": "1",
+    "Isbn": "234-3481926739",
+    "Prix": 1,
+    "Categorie": "System.Windows.Controls.ComboBoxItem: Science-Fiction",
+    "Quantite": 1
   }
 ]
