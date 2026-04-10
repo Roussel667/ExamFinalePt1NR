@@ -94,12 +94,17 @@ namespace ExamFinalePt1NR.Views.UsersControls.Livre
 
         private void BtnDecrementer_Click(object sender, RoutedEventArgs e)
         {
+            TxtQuantte.Text = (int.Parse(TxtQuantte.Text) - 1).ToString();
+            if (int.Parse(TxtQuantte.Text) < 0)
+            {
+                TxtQuantte.Text = "0";
+            }
 
         }
 
         private void BtnIncrementer_Click(object sender, RoutedEventArgs e)
         {
-
+            TxtQuantte.Text = (int.Parse(TxtQuantte.Text) + 1).ToString();
         }
     }
 }
