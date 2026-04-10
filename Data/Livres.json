@@ -52,5 +52,14 @@
     "Prix": 123,
     "Categorie": "Classique",
     "Quantite": 1
+  },
+  {
+    "Id": 7,
+    "Titre": "d",
+    "Auteur": "d",
+    "Isbn": "2321",
+    "Prix": 123,
+    "Categorie": "Science-Fiction",
+    "Quantite": 3
   }
 ]
